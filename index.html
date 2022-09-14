@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Auto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT"
+     crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+  
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Combo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Ms+Madi&display=swap" rel="stylesheet">
+
+    <link href="./node_modules/cropperjs/dist/cropper.min.css" rel="stylesheet">
+</head>
+<body >
+    <nav class="navbar bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#" >
+            Photo App
+          </a>
+        </div>
+      </nav>
+    <div style="margin-bottom: 20px; margin-left: 20px; margin-top: 20px; margin: 40px">
+
+
+        <!-- carousel -->
+        <div id="carouselExampleControls" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <h2 class="text-white text-center"  >Choose Background</h2>
+            <div class="carousel-inner">
+              <div class="carousel-item active" id="bg_1">
+                <img id="b1" src="b1.png" style="max-width: 350px; max-height: 500px; margin: auto;" class="d-block w-100" alt="...">
+
+              </div>
+              <div class="carousel-item" id="bg_2">
+                <img id="b2" src="b2.png" style="max-width: 350px; max-height: 500px; margin: auto;" class="d-block w-100" alt="...">
+
+              </div>
+              <div class="carousel-item" id="bg_3">
+                <img id="b3" src="b3.png" style="max-width: 350px; max-height: 500px; margin: auto;" class="d-block w-100" alt="...">
+
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <br>
+          <hr class="text-white">
+    <div class="row align-items-start">
+
+        <h2 class="text-white text-center" >Project</h2>
+
+        <div class="col-md-2">
+
+            <form action="http://127.0.0.1:8080/fileupload" method="post" enctype="multipart/form-data">
+                <label class="text-white">Your Pic:</label>
+                <input type="file" name="filetoupload" id="image_input"  class="form-control"/>
+                <input type="submit" value="Upload">
+            </form>       
+        <label class="text-white">Text:</label>
+        <input type="text" id="upload_desc" value="Sample Text"  class="form-control"/>
+        <label class="text-white">Color:</label>
+        <input type="color" id="upload_color" class="form-control"/>
+        <label class="text-white">Font:</label>
+        <select  class="form-control" id="upload_font">
+            <option>Combo</option>
+            <option>Arial</option>
+            <option>Verdana</option>
+            <option>Tahoma</option>
+            <option>Nabla</option>
+            <option>Bungee Spice</option>
+            <option>MS Madi</option>
+        </select>
+        <label class="text-white">Font Size:</label>
+        <input type="number" value="60" step="5" id="upload_fontsize" class="form-control"/>
+        <a id="download">Download</a>
+
+
+        <div class="parent drag" id="mydiv">
+            <div id="mydivheader" class="drag">
+            <!-- <img class="person" src="letter.png" /> -->
+                <h1 id="description">Sample Text</h1>
+            </div>
+        </div>
+        </div>
+        
+        <div class="col-md-10">
+
+            <div class="parent drag" id="htmlContent">
+            
+
+                <img class="person img-fluid" style="max-width: 350px; max-height: 500px; margin: auto;"  id="image_uploaded" src="float.png" />
+                <button id="cropImageBtn">Crop</button>
+        
+           </div>
+        </div>
+    </div>
+    </div>
+
+    </div>
+    <br>
+  
+    <br><center>
+    <img src="" id="output">
+    </center>
+    <script src="./node_modules/cropperjs/dist/cropper.min.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js" integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous"></script>
+</body>
+</html>

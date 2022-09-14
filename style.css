@@ -1,0 +1,47 @@
+body {
+    padding: 0;
+    margin: 0;
+    background-color: black;
+    font-family: 'Combo';
+}
+
+
+h1 {
+  color: #D5D5D5;
+  font-size: 60px;
+  text-shadow: 2px 2px #1B1934;
+}
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .person {
+  
+
+    margin: auto;
+
+  }
+
+
+  .letter {
+    
+    /* position: absolute;
+    border: 1px green solid;
+    left: 50%; */
+
+
+  }
+
+
+  #mydiv {
+    position: absolute;
+    z-index: 9;
+    text-align: center;
+
+  }
+  
+  #mydivheader {
+    cursor: move;
+    z-index: 10;
+  }
